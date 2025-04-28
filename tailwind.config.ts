@@ -6,7 +6,7 @@ export default {
 		"./pages/**/*.{ts,tsx}",
 		"./components/**/*.{ts,tsx}",
 		"./app/**/*.{ts,tsx}",
-		"./src/**/*.{ts,tsx}",
+		"./src/**/*.{ts,tsx}"
 	],
 	prefix: "",
 	theme: {
@@ -61,6 +61,19 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Новая натуральная палитра
+				nature: {
+					forest: '#2D6A4F',    // Темно-зеленый (лесной)
+					moss: '#40916C',      // Зеленый мох
+					sage: '#52B788',      // Шалфейный зеленый
+					olive: '#6B705C',     // Оливковый
+					khaki: '#A3B18A',     // Хаки
+					sand: '#DDA15E',      // Песочный
+					amber: '#BC6C25',     // Янтарный
+					umber: '#774936',     // Умбра (темно-коричневый)
+					clay: '#CB997E',      // Глиняный
+					cream: '#F0EAD2'      // Кремовый
 				}
 			},
 			borderRadius: {
@@ -84,11 +97,22 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'fade-in': {
+					'0%': { 
+						opacity: '0',
+						transform: 'translateY(10px)'
+					},
+					'100%': { 
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.5s ease-out'
 			}
 		}
 	},
